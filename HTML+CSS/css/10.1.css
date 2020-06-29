@@ -1,0 +1,31 @@
+#divLogin{
+    border: 5px solid cornsilk;
+    height: 600px;
+    margin: 80px 200px auto 200px ;
+    padding: 20px;
+    background-color: #d6d6dc;
+}
+
+#divImg{
+    border: 1px solid;
+    float: left;
+    width: 332px;
+    height: 332px;
+    margin-right: 50px;
+}
+
+#divZc{
+    float: right;
+}
+
+#divInput{
+    border: 1px solid red;
+    float: left;
+    width: 500px;
+    text-align: center;
+    align-content: center;
+}
+
+form div{
+    margin-bottom: 30px;
+}
