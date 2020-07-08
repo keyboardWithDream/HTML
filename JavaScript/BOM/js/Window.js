@@ -21,3 +21,23 @@ function bClose() {
         open("https://www.baidu.com");
     }
 }
+
+let tid;
+
+function sTout() {
+    tid = setTimeout("alert('Hello world!')",3000);
+}
+
+function cTout() {
+    clearTimeout(tid)
+}
+
+let  sid;
+
+function sIval() {
+    sid = setInterval("alert('Hello JavaScript!')", 3000);
+}
+
+function csi() {
+    clearInterval(sid)
+}
