@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>自动跳转到首页</title>
+</head>
+<body>
+<input type="button" value="自动跳转" id="autoLoad">
+<p style="text-align: center"><span id="time" style="color: red">5</span>秒后自动跳转...</p>
+</body>
+<script>
+    const autoLoad = document.getElementById("autoLoad");
+    let time = document.getElementById("time");
+    let sec = 5;
+    autoLoad.onclick = setInterval(function () {
+        time.innerHTML = sec--;
+        if (sec === 0){
+            location.href = "https://www.baidu.com";
+        }
+    }, 3000);
+</script>
+</html>

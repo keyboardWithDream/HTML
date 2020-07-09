@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Location对象</title>
+</head>
+<body>
+<input type="button" id="reload" value="刷新">
+<hr/>
+<label for="url">请输入网址：</label><input type="text" id="url">
+<input type="button" id="goTo" value="跳转">
+</body>
+<script>
+    const btnReload = document.getElementById("reload");
+    btnReload.onclick = function () {
+        location.reload();
+    }
+
+    const url = document.getElementById("url");
+    const btnBai = document.getElementById("goTo");
+    btnBai.onclick = function () {
+        location.href = ("https://"+url.value);
+    }
+</script>
+</html>
