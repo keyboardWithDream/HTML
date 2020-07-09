@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>Element对象</title>
+</head>
+<body>
+<a>点我试一试</a>
+<input type="button" value="设置属性" onclick="setA()">
+<input type="button" value="删除属性" onclick="removeA()">
+</body>
+<script>
+    const aElement = document.getElementsByTagName("a")[0];
+    function setA() {
+        aElement.setAttribute("href", "https://www.baidu.com");
+    }
+
+    function removeA() {
+        aElement.removeAttribute("href");
+    }
+</script>
+</html>
