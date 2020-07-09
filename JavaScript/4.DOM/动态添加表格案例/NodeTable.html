@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加表格</title>
+    <style>
+        table{
+            border: 1px solid red;
+            margin: auto;
+            width: 500px;
+        }
+
+        td, th{
+            text-align: center;
+            border: 1px solid blue;
+        }
+
+        div{
+            text-align: center;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <form method="get">
+        <label for="id">编号:</label><input type="text" name="id" id="id" placeholder="请输入编号">
+        <label for="name">姓名：</label><input type="text" name="name" id="name" placeholder="请输入姓名">
+        <label for="sex">性别：</label><input type="text" name="sex" id="sex" placeholder="请输入性别">
+        <input type="button" id="btn_add" value="添加">
+    </form>
+</div>
+<div>
+    <table id="table">
+        <thead>学生信息表</thead>
+        <tr>
+            <td><b>编号</b></td>
+            <td><b>姓名</b></td>
+            <td><b>性别</b></td>
+            <td><b>操作</b></td>
+        </tr>
+    </table>
+</div>
+</body>
+<script>
+    document.getElementById("btn_add").onclick = function() {
+        const id = document.getElementById("id").value;
+        const name = document.getElementById("name").value;
+        const sex = document.getElementById("sex").value;
+        const table = document.getElementById("table");
+        const tr = document.createElement("tr");
+
+        const td_id = document.createElement("td");
+        const td_name = document.createElement("td");
+        const td_sex = document.createElement("td");
+        const td_operating = document.createElement("td");
+
+        const text_id = document.createTextNode(id);
+        const text_name = document.createTextNode(name);
+        const text_sex = document.createTextNode(sex);
+        const element_a = document.createElement("a");
+
+        element_a.innerText = "删除";
+        element_a.setAttribute("href", "javascript:void(0);");
+        element_a.setAttribute("onclick", "del(this);");
+        td_id.appendChild(text_id);
+        td_name.appendChild(text_name);
+        td_sex.appendChild(text_sex);
+        td_operating.appendChild(element_a);
+
+        tr.appendChild(td_id);
+        tr.appendChild(td_name);
+        tr.appendChild(td_sex);
+        tr.appendChild(td_operating);
+        table.appendChild(tr);
+        alert("添加成功！")
+
+        function del(obj){
+            const table = obj.parentNode.parentNode.parentNode;
+            const tr = obj.parentNode.parentNode;
+            table.removeChild(tr);
+        }
+    }
+</script>
+</html>
