@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件</title>
+    <script>
+        //加载完成事件
+        window.onload = function () {
+
+            //失去焦点事件
+            document.getElementById("username").onblur = function () {
+                alert("失去焦点");
+            }
+
+            //鼠标事件
+            document.getElementById("username").onmouseover = function () {
+                alert("鼠标来了");
+            }
+
+            document.getElementById("username").onmousedown = function (event) {
+                alert(event.button);
+            }
+        }
+    </script>
+</head>
+<body>
+<label for="username">文本框</label><input type="text" id="username">
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML DOM</title>
+</head>
+<body>
+<div id="div1">
+    div
+</div>
+</body>
+</html>
+<script>
+    const div1 = document.getElementById("div1");
+    div1.innerHTML += "<input type='text' placeholder='文本输入框'>";
+    div1.onclick = function(){
+        div1.style.border = "1px solid red";
+    }
+</script>
