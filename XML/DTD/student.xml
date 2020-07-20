@@ -11,4 +11,9 @@
         <age>27</age>
         <sex>男</sex>
     </student>
+    <student number="s003">
+        <name>王五</name>
+        <age>47</age>
+        <sex>男</sex>
+    </student>
 </students>

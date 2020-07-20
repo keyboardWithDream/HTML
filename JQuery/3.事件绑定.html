@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <title>事件绑定</title>
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script>
+        //入口函数
+        $(function () {
+
+            //给btn_1添加单击事件
+            $("#btn_1").click(function(){
+                alert("Hello World!")
+            });
+
+        });
+
+        $(function () {
+            $("#div_1").css("backgroundColor", "black");
+        })
+    </script>
+</head>
+<body>
+<div id="div_1">Hello World!</div>
+<input type="button" id="btn_1" value="点击">
+</body>
+</html>
